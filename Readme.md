@@ -59,4 +59,6 @@ npm run build    # type-check + production build into dist/
 ## Deployment (GitHub Pages)
 
 [.github/workflows/deploy.yml](.github/workflows/deploy.yml) builds and deploys `dist/` on every push to `main`.
-In the repository go to **Settings → Pages** and set **Source** to **GitHub Actions**. The app uses hash routing and a relative `base`, so it works under `https://<user>.github.io/Movo/` without extra configuration.
+In the repository go to **Settings → Pages** and set **Source** to **GitHub Actions**. Push the changes to `main`, then check the workflow under **Actions**. Once deployment succeeds, the app is available at [https://inbal-mishory.github.io/Movo/](https://inbal-mishory.github.io/Movo/).
+
+Vite uses `/Movo/` as its base path. The app uses hash routing (for example, `/#/schedule`) so routes can be refreshed on GitHub Pages.
