@@ -1,0 +1,101 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* The design is drawn at 1920px wide where 1rem = 16px; below that the whole UI scales proportionally. */
+html {
+  font-size: clamp(12px, calc(100vw / 120), 22px);
+}
+
+@media (max-width: 1100px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  color: var(--text);
+  background: var(--green-100);
+  direction: rtl;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+p,
+dl,
+dd,
+ul {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--green-600);
+  outline-offset: 2px;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline-offset: 0;
+  outline-width: 1px;
+}
+
+/* Scroll areas keep their thumb on the right edge like the design, even in RTL. */
+.scroll-area {
+  direction: ltr;
+  overflow-y: auto;
+}
+
+.scroll-area::-webkit-scrollbar {
+  width: 5px;
+}
+
+.scroll-area::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background: var(--green-850);
+}
+
+.scroll-area::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  .scroll-area {
+    scrollbar-width: thin;
+    scrollbar-color: var(--green-850) transparent;
+  }
+}
+
+.scroll-area > * {
+  direction: rtl;
+}

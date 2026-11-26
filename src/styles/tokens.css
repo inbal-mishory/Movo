@@ -1,0 +1,29 @@
+:root {
+  --green-900: #1a3525;
+  --green-850: #13442e;
+  --green-800: #2d593e;
+  --green-700: #397250;
+  --green-600: #3f7d58;
+  --green-500: #437f5b;
+  --green-300: #a7c3b2;
+  --green-200: #c3d7cb;
+  --green-100: #ecf2ee;
+
+  --critical: #fc2828;
+  --critical-tint: #fff5f5;
+  --critical-soft: #ff5c5c;
+  --warning: #f09400;
+  --warning-tint: #fdf0dc;
+
+  --text: #1c1f1d;
+  --text-muted: #555b57;
+  --text-subtle: #8a918d;
+  --border: #b5bcc3;
+  --line: #d9dcdb;
+  --surface: #ffffff;
+  --surface-muted: #f4f4f6;
+
+  --font-sans: 'Open Sans Hebrew', 'Open Sans Variable', 'Open Sans', 'Segoe UI', Arial, sans-serif;
+
+  --shadow-modal: 0 24px 56px rgba(26, 53, 37, 0.22);
+}

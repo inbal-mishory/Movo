@@ -1,0 +1,173 @@
+.shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 17px 16px 16px;
+}
+
+.header {
+  flex: none;
+  height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 24px;
+  border-radius: 6px;
+  background: var(--green-800);
+  color: #fff;
+}
+
+.header__brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.header__logo {
+  width: 165px;
+  height: 40px;
+  flex: none;
+  color: #fff;
+}
+
+.header__title {
+  font-size: 24px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.header__user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 34px;
+  padding: 0 11px;
+  border: 1px solid #c9d4cd;
+  border-radius: 4px;
+  background: #fff;
+  color: var(--text);
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.header__divider {
+  color: var(--text-subtle);
+}
+
+.header__time {
+  display: flex;
+  gap: 10px;
+}
+
+.shell__body {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 142px minmax(0, 1fr);
+  gap: 30px;
+  min-height: 0;
+}
+
+.shell__main {
+  min-width: 0;
+}
+
+.sidebar {
+  padding: 12px 9px;
+  border-radius: 4px;
+  background: var(--green-200);
+}
+
+.sidebar__list {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 40px;
+  padding: 0 10px;
+  border: 1px solid #e3e9e5;
+  border-radius: 12px;
+  background: #fff;
+  color: var(--green-900);
+  font-size: 12.5px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.15s;
+}
+
+.nav-item svg {
+  flex: none;
+  width: 15px;
+  height: 15px;
+}
+
+a.nav-item:hover:not(.nav-item--active) {
+  background: var(--green-100);
+}
+
+.nav-item--active {
+  border-color: var(--green-600);
+  background: var(--green-600);
+  color: #fff;
+}
+
+.nav-item--disabled {
+  cursor: default;
+}
+
+@media (max-width: 1100px) {
+  .shell__body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .sidebar {
+    padding: 8px;
+    overflow-x: auto;
+  }
+
+  .sidebar__list {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .nav-item {
+    min-width: max-content;
+  }
+}
+
+@media (max-width: 720px) {
+  .shell {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .header {
+    padding: 0 12px;
+  }
+
+  .header__logo {
+    width: 96px;
+    height: 24px;
+  }
+
+  .header__title {
+    font-size: 16px;
+  }
+
+  .header__greeting,
+  .header__divider {
+    display: none;
+  }
+
+  .shell__body {
+    gap: 10px;
+  }
+}
